@@ -1,0 +1,912 @@
+in php: Whenever a session is created, a cookie containing the unique session id is stored on the user’s computer and returned with every request to the server.If the client browser does not support cookies, the unique php session id is displayed in the URL
+
+Ratchet \ Server \ IoServer
+object(React \ EventLoop \ StreamSelectLoop) # 4(8) {
+	["nextTickQueue": "React\EventLoop\StreamSelectLoop": private] =>
+	object(React \ EventLoop \ Tick \ NextTickQueue) # 5(2) {
+		["eventLoop": "React\EventLoop\Tick\NextTickQueue": private] =>
+		 * RECURSION *
+		["queue": "React\EventLoop\Tick\NextTickQueue": private] =>
+		object(SplQueue) # 6(2) {
+			["flags": "SplDoublyLinkedList": private] =>
+			int(4)
+			["dllist": "SplDoublyLinkedList": private] =>
+			array(0) {}
+		}
+	}
+	["futureTickQueue": "React\EventLoop\StreamSelectLoop": private] =>
+	object(React \ EventLoop \ Tick \ FutureTickQueue) # 7(2) {
+		["eventLoop": "React\EventLoop\Tick\FutureTickQueue": private] =>
+		 * RECURSION *
+		["queue": "React\EventLoop\Tick\FutureTickQueue": private] =>
+		object(SplQueue) # 8(2) {
+			["flags": "SplDoublyLinkedList": private] =>
+			int(4)
+			["dllist": "SplDoublyLinkedList": private] =>
+			array(0) {}
+		}
+	}
+	["timers": "React\EventLoop\StreamSelectLoop": private] =>
+	object(React \ EventLoop \ Timer \ Timers) # 9(3) {
+		["time": "React\EventLoop\Timer\Timers": private] =>
+		NULL
+		["timers": "React\EventLoop\Timer\Timers": private] =>
+		object(SplObjectStorage) # 10(1) {
+			["storage": "SplObjectStorage": private] =>
+			array(0) {}
+		}
+		["scheduler": "React\EventLoop\Timer\Timers": private] =>
+		object(SplPriorityQueue) # 11(3) {
+			["flags": "SplPriorityQueue": private] =>
+			int(1)
+			["isCorrupted": "SplPriorityQueue": private] =>
+			bool(false)
+			["heap": "SplPriorityQueue": private] =>
+			array(0) {}
+		}
+	}
+	["readStreams": "React\EventLoop\StreamSelectLoop": private] =>
+	array(1) {
+		[38] =>
+		resource(38)of type(stream)
+	}
+	["readListeners": "React\EventLoop\StreamSelectLoop": private] =>
+	array(1) {
+		[38] =>
+		object(Closure) # 14(3) {
+			["static"] =>
+			array(1) {
+				["that"] =>
+				object(React \ Socket \ TcpServer) # 13(4) {
+					["master": "React\Socket\TcpServer": private] =>
+					resource(38)of type(stream)
+					["loop": "React\Socket\TcpServer": private] =>
+					 * RECURSION *
+					["listening": "React\Socket\TcpServer": private] =>
+					bool(true)
+					["listeners": protected] =>
+					array(2) {
+						["connection"] =>
+						array(1) {
+							[0] =>
+							object(Closure) # 15(3) {
+								["static"] =>
+								array(1) {
+									["that"] =>
+									object(React \ Socket \ Server) # 12(2) {
+										["server": "React\Socket\Server": private] =>
+										 * RECURSION *
+										["listeners": protected] =>
+										array(1) {
+											["connection"] =>
+											array(1) {
+												[0] =>
+												array(2) {
+													[0] =>
+													object(Ratchet \ Server \ IoServer) # 17(3) {
+														["loop"] =>
+														 * RECURSION *
+														["app"] =>
+														object(MyApp \ Chat) # 3(1) {
+															["clients": protected] =>
+															object(SplObjectStorage) # 2(1) {
+																["storage": "SplObjectStorage": private] =>
+																array(0) {}
+															}
+														}
+														["socket"] =>
+														 * RECURSION *
+													}
+													[1] =>
+													string(13)"handleConnect"
+												}
+											}
+										}
+									}
+								}
+								["this"] =>
+								object(React \ Socket \ Server) # 12(2) {
+									["server": "React\Socket\Server": private] =>
+									 * RECURSION *
+									["listeners": protected] =>
+									array(1) {
+										["connection"] =>
+										array(1) {
+											[0] =>
+											array(2) {
+												[0] =>
+												object(Ratchet \ Server \ IoServer) # 17(3) {
+													["loop"] =>
+													 * RECURSION *
+													["app"] =>
+													object(MyApp \ Chat) # 3(1) {
+														["clients": protected] =>
+														object(SplObjectStorage) # 2(1) {
+															["storage": "SplObjectStorage": private] =>
+															array(0) {}
+														}
+													}
+													["socket"] =>
+													 * RECURSION *
+												}
+												[1] =>
+												string(13)"handleConnect"
+											}
+										}
+									}
+								}
+								["parameter"] =>
+								array(1) {
+									["$conn"] =>
+									string(10)"<required>"
+								}
+							}
+						}
+						["error"] =>
+						array(1) {
+							[0] =>
+							object(Closure) # 16(3) {
+								["static"] =>
+								array(1) {
+									["that"] =>
+									object(React \ Socket \ Server) # 12(2) {
+										["server": "React\Socket\Server": private] =>
+										 * RECURSION *
+										["listeners": protected] =>
+										array(1) {
+											["connection"] =>
+											array(1) {
+												[0] =>
+												array(2) {
+													[0] =>
+													object(Ratchet \ Server \ IoServer) # 17(3) {
+														["loop"] =>
+														 * RECURSION *
+														["app"] =>
+														object(MyApp \ Chat) # 3(1) {
+															["clients": protected] =>
+															object(SplObjectStorage) # 2(1) {
+																["storage": "SplObjectStorage": private] =>
+																array(0) {}
+															}
+														}
+														["socket"] =>
+														 * RECURSION *
+													}
+													[1] =>
+													string(13)"handleConnect"
+												}
+											}
+										}
+									}
+								}
+								["this"] =>
+								object(React \ Socket \ Server) # 12(2) {
+									["server": "React\Socket\Server": private] =>
+									 * RECURSION *
+									["listeners": protected] =>
+									array(1) {
+										["connection"] =>
+										array(1) {
+											[0] =>
+											array(2) {
+												[0] =>
+												object(Ratchet \ Server \ IoServer) # 17(3) {
+													["loop"] =>
+													 * RECURSION *
+													["app"] =>
+													object(MyApp \ Chat) # 3(1) {
+														["clients": protected] =>
+														object(SplObjectStorage) # 2(1) {
+															["storage": "SplObjectStorage": private] =>
+															array(0) {}
+														}
+													}
+													["socket"] =>
+													 * RECURSION *
+												}
+												[1] =>
+												string(13)"handleConnect"
+											}
+										}
+									}
+								}
+								["parameter"] =>
+								array(1) {
+									["$error"] =>
+									string(10)"<required>"
+								}
+							}
+						}
+					}
+				}
+			}
+			["this"] =>
+			object(React \ Socket \ TcpServer) # 13(4) {
+				["master": "React\Socket\TcpServer": private] =>
+				resource(38)of type(stream)
+				["loop": "React\Socket\TcpServer": private] =>
+				 * RECURSION *
+				["listening": "React\Socket\TcpServer": private] =>
+				bool(true)
+				["listeners": protected] =>
+				array(2) {
+					["connection"] =>
+					array(1) {
+						[0] =>
+						object(Closure) # 15(3) {
+							["static"] =>
+							array(1) {
+								["that"] =>
+								object(React \ Socket \ Server) # 12(2) {
+									["server": "React\Socket\Server": private] =>
+									 * RECURSION *
+									["listeners": protected] =>
+									array(1) {
+										["connection"] =>
+										array(1) {
+											[0] =>
+											array(2) {
+												[0] =>
+												object(Ratchet \ Server \ IoServer) # 17(3) {
+													["loop"] =>
+													 * RECURSION *
+													["app"] =>
+													object(MyApp \ Chat) # 3(1) {
+														["clients": protected] =>
+														object(SplObjectStorage) # 2(1) {
+															["storage": "SplObjectStorage": private] =>
+															array(0) {}
+														}
+													}
+													["socket"] =>
+													 * RECURSION *
+												}
+												[1] =>
+												string(13)"handleConnect"
+											}
+										}
+									}
+								}
+							}
+							["this"] =>
+							object(React \ Socket \ Server) # 12(2) {
+								["server": "React\Socket\Server": private] =>
+								 * RECURSION *
+								["listeners": protected] =>
+								array(1) {
+									["connection"] =>
+									array(1) {
+										[0] =>
+										array(2) {
+											[0] =>
+											object(Ratchet \ Server \ IoServer) # 17(3) {
+												["loop"] =>
+												 * RECURSION *
+												["app"] =>
+												object(MyApp \ Chat) # 3(1) {
+													["clients": protected] =>
+													object(SplObjectStorage) # 2(1) {
+														["storage": "SplObjectStorage": private] =>
+														array(0) {}
+													}
+												}
+												["socket"] =>
+												 * RECURSION *
+											}
+											[1] =>
+											string(13)"handleConnect"
+										}
+									}
+								}
+							}
+							["parameter"] =>
+							array(1) {
+								["$conn"] =>
+								string(10)"<required>"
+							}
+						}
+					}
+					["error"] =>
+					array(1) {
+						[0] =>
+						object(Closure) # 16(3) {
+							["static"] =>
+							array(1) {
+								["that"] =>
+								object(React \ Socket \ Server) # 12(2) {
+									["server": "React\Socket\Server": private] =>
+									 * RECURSION *
+									["listeners": protected] =>
+									array(1) {
+										["connection"] =>
+										array(1) {
+											[0] =>
+											array(2) {
+												[0] =>
+												object(Ratchet \ Server \ IoServer) # 17(3) {
+													["loop"] =>
+													 * RECURSION *
+													["app"] =>
+													object(MyApp \ Chat) # 3(1) {
+														["clients": protected] =>
+														object(SplObjectStorage) # 2(1) {
+															["storage": "SplObjectStorage": private] =>
+															array(0) {}
+														}
+													}
+													["socket"] =>
+													 * RECURSION *
+												}
+												[1] =>
+												string(13)"handleConnect"
+											}
+										}
+									}
+								}
+							}
+							["this"] =>
+							object(React \ Socket \ Server) # 12(2) {
+								["server": "React\Socket\Server": private] =>
+								 * RECURSION *
+								["listeners": protected] =>
+								array(1) {
+									["connection"] =>
+									array(1) {
+										[0] =>
+										array(2) {
+											[0] =>
+											object(Ratchet \ Server \ IoServer) # 17(3) {
+												["loop"] =>
+												 * RECURSION *
+												["app"] =>
+												object(MyApp \ Chat) # 3(1) {
+													["clients": protected] =>
+													object(SplObjectStorage) # 2(1) {
+														["storage": "SplObjectStorage": private] =>
+														array(0) {}
+													}
+												}
+												["socket"] =>
+												 * RECURSION *
+											}
+											[1] =>
+											string(13)"handleConnect"
+										}
+									}
+								}
+							}
+							["parameter"] =>
+							array(1) {
+								["$error"] =>
+								string(10)"<required>"
+							}
+						}
+					}
+				}
+			}
+			["parameter"] =>
+			array(1) {
+				["$master"] =>
+				string(10)"<required>"
+			}
+		}
+	}
+	["writeStreams": "React\EventLoop\StreamSelectLoop": private] =>
+	array(0) {}
+	["writeListeners": "React\EventLoop\StreamSelectLoop": private] =>
+	array(0) {}
+	["running": "React\EventLoop\StreamSelectLoop": private] =>
+	NULL
+}
+
+object(MyApp \ Chat) # 3(1) {
+	["clients": protected] =>
+	object(SplObjectStorage) # 2(1) {
+		["storage": "SplObjectStorage": private] =>
+		array(0) {}
+	}
+}
+
+object(React \ Socket \ Server) # 12(2) {
+	["server": "React\Socket\Server": private] =>
+	object(React \ Socket \ TcpServer) # 13(4) {
+		["master": "React\Socket\TcpServer": private] =>
+		resource(38)of type(stream)
+		["loop": "React\Socket\TcpServer": private] =>
+		object(React \ EventLoop \ StreamSelectLoop) # 4(8) {
+			["nextTickQueue": "React\EventLoop\StreamSelectLoop": private] =>
+			object(React \ EventLoop \ Tick \ NextTickQueue) # 5(2) {
+				["eventLoop": "React\EventLoop\Tick\NextTickQueue": private] =>
+				 * RECURSION *
+				["queue": "React\EventLoop\Tick\NextTickQueue": private] =>
+				object(SplQueue) # 6(2) {
+					["flags": "SplDoublyLinkedList": private] =>
+					int(4)
+					["dllist": "SplDoublyLinkedList": private] =>
+					array(0) {}
+				}
+			}
+			["futureTickQueue": "React\EventLoop\StreamSelectLoop": private] =>
+			object(React \ EventLoop \ Tick \ FutureTickQueue) # 7(2) {
+				["eventLoop": "React\EventLoop\Tick\FutureTickQueue": private] =>
+				 * RECURSION *
+				["queue": "React\EventLoop\Tick\FutureTickQueue": private] =>
+				object(SplQueue) # 8(2) {
+					["flags": "SplDoublyLinkedList": private] =>
+					int(4)
+					["dllist": "SplDoublyLinkedList": private] =>
+					array(0) {}
+				}
+			}
+			["timers": "React\EventLoop\StreamSelectLoop": private] =>
+			object(React \ EventLoop \ Timer \ Timers) # 9(3) {
+				["time": "React\EventLoop\Timer\Timers": private] =>
+				NULL
+				["timers": "React\EventLoop\Timer\Timers": private] =>
+				object(SplObjectStorage) # 10(1) {
+					["storage": "SplObjectStorage": private] =>
+					array(0) {}
+				}
+				["scheduler": "React\EventLoop\Timer\Timers": private] =>
+				object(SplPriorityQueue) # 11(3) {
+					["flags": "SplPriorityQueue": private] =>
+					int(1)
+					["isCorrupted": "SplPriorityQueue": private] =>
+					bool(false)
+					["heap": "SplPriorityQueue": private] =>
+					array(0) {}
+				}
+			}
+			["readStreams": "React\EventLoop\StreamSelectLoop": private] =>
+			array(1) {
+				[38] =>
+				resource(38)of type(stream)
+			}
+			["readListeners": "React\EventLoop\StreamSelectLoop": private] =>
+			array(1) {
+				[38] =>
+				object(Closure) # 14(3) {
+					["static"] =>
+					array(1) {
+						["that"] =>
+						 * RECURSION *
+					}
+					["this"] =>
+					 * RECURSION *
+					["parameter"] =>
+					array(1) {
+						["$master"] =>
+						string(10)"<required>"
+					}
+				}
+			}
+			["writeStreams": "React\EventLoop\StreamSelectLoop": private] =>
+			array(0) {}
+			["writeListeners": "React\EventLoop\StreamSelectLoop": private] =>
+			array(0) {}
+			["running": "React\EventLoop\StreamSelectLoop": private] =>
+			NULL
+		}
+		["listening": "React\Socket\TcpServer": private] =>
+		bool(true)
+		["listeners": protected] =>
+		array(2) {
+			["connection"] =>
+			array(1) {
+				[0] =>
+				object(Closure) # 15(3) {
+					["static"] =>
+					array(1) {
+						["that"] =>
+						 * RECURSION *
+					}
+					["this"] =>
+					 * RECURSION *
+					["parameter"] =>
+					array(1) {
+						["$conn"] =>
+						string(10)"<required>"
+					}
+				}
+			}
+			["error"] =>
+			array(1) {
+				[0] =>
+				object(Closure) # 16(3) {
+					["static"] =>
+					array(1) {
+						["that"] =>
+						 * RECURSION *
+					}
+					["this"] =>
+					 * RECURSION *
+					["parameter"] =>
+					array(1) {
+						["$error"] =>
+						string(10)"<required>"
+					}
+				}
+			}
+		}
+	}
+	["listeners": protected] =>
+	array(1) {
+		["connection"] =>
+		array(1) {
+			[0] =>
+			array(2) {
+				[0] =>
+				object(Ratchet \ Server \ IoServer) # 17(3) {
+					["loop"] =>
+					object(React \ EventLoop \ StreamSelectLoop) # 4(8) {
+						["nextTickQueue": "React\EventLoop\StreamSelectLoop": private] =>
+						object(React \ EventLoop \ Tick \ NextTickQueue) # 5(2) {
+							["eventLoop": "React\EventLoop\Tick\NextTickQueue": private] =>
+							 * RECURSION *
+							["queue": "React\EventLoop\Tick\NextTickQueue": private] =>
+							object(SplQueue) # 6(2) {
+								["flags": "SplDoublyLinkedList": private] =>
+								int(4)
+								["dllist": "SplDoublyLinkedList": private] =>
+								array(0) {}
+							}
+						}
+						["futureTickQueue": "React\EventLoop\StreamSelectLoop": private] =>
+						object(React \ EventLoop \ Tick \ FutureTickQueue) # 7(2) {
+							["eventLoop": "React\EventLoop\Tick\FutureTickQueue": private] =>
+							 * RECURSION *
+							["queue": "React\EventLoop\Tick\FutureTickQueue": private] =>
+							object(SplQueue) # 8(2) {
+								["flags": "SplDoublyLinkedList": private] =>
+								int(4)
+								["dllist": "SplDoublyLinkedList": private] =>
+								array(0) {}
+							}
+						}
+						["timers": "React\EventLoop\StreamSelectLoop": private] =>
+						object(React \ EventLoop \ Timer \ Timers) # 9(3) {
+							["time": "React\EventLoop\Timer\Timers": private] =>
+							NULL
+							["timers": "React\EventLoop\Timer\Timers": private] =>
+							object(SplObjectStorage) # 10(1) {
+								["storage": "SplObjectStorage": private] =>
+								array(0) {}
+							}
+							["scheduler": "React\EventLoop\Timer\Timers": private] =>
+							object(SplPriorityQueue) # 11(3) {
+								["flags": "SplPriorityQueue": private] =>
+								int(1)
+								["isCorrupted": "SplPriorityQueue": private] =>
+								bool(false)
+								["heap": "SplPriorityQueue": private] =>
+								array(0) {}
+							}
+						}
+						["readStreams": "React\EventLoop\StreamSelectLoop": private] =>
+						array(1) {
+							[38] =>
+							resource(38)of type(stream)
+						}
+						["readListeners": "React\EventLoop\StreamSelectLoop": private] =>
+						array(1) {
+							[38] =>
+							object(Closure) # 14(3) {
+								["static"] =>
+								array(1) {
+									["that"] =>
+									object(React \ Socket \ TcpServer) # 13(4) {
+										["master": "React\Socket\TcpServer": private] =>
+										resource(38)of type(stream)
+										["loop": "React\Socket\TcpServer": private] =>
+										 * RECURSION *
+										["listening": "React\Socket\TcpServer": private] =>
+										bool(true)
+										["listeners": protected] =>
+										array(2) {
+											["connection"] =>
+											array(1) {
+												[0] =>
+												object(Closure) # 15(3) {
+													["static"] =>
+													array(1) {
+														["that"] =>
+														 * RECURSION *
+													}
+													["this"] =>
+													 * RECURSION *
+													["parameter"] =>
+													array(1) {
+														["$conn"] =>
+														string(10)"<required>"
+													}
+												}
+											}
+											["error"] =>
+											array(1) {
+												[0] =>
+												object(Closure) # 16(3) {
+													["static"] =>
+													array(1) {
+														["that"] =>
+														 * RECURSION *
+													}
+													["this"] =>
+													 * RECURSION *
+													["parameter"] =>
+													array(1) {
+														["$error"] =>
+														string(10)"<required>"
+													}
+												}
+											}
+										}
+									}
+								}
+								["this"] =>
+								object(React \ Socket \ TcpServer) # 13(4) {
+									["master": "React\Socket\TcpServer": private] =>
+									resource(38)of type(stream)
+									["loop": "React\Socket\TcpServer": private] =>
+									 * RECURSION *
+									["listening": "React\Socket\TcpServer": private] =>
+									bool(true)
+									["listeners": protected] =>
+									array(2) {
+										["connection"] =>
+										array(1) {
+											[0] =>
+											object(Closure) # 15(3) {
+												["static"] =>
+												array(1) {
+													["that"] =>
+													 * RECURSION *
+												}
+												["this"] =>
+												 * RECURSION *
+												["parameter"] =>
+												array(1) {
+													["$conn"] =>
+													string(10)"<required>"
+												}
+											}
+										}
+										["error"] =>
+										array(1) {
+											[0] =>
+											object(Closure) # 16(3) {
+												["static"] =>
+												array(1) {
+													["that"] =>
+													 * RECURSION *
+												}
+												["this"] =>
+												 * RECURSION *
+												["parameter"] =>
+												array(1) {
+													["$error"] =>
+													string(10)"<required>"
+												}
+											}
+										}
+									}
+								}
+								["parameter"] =>
+								array(1) {
+									["$master"] =>
+									string(10)"<required>"
+								}
+							}
+						}
+						["writeStreams": "React\EventLoop\StreamSelectLoop": private] =>
+						array(0) {}
+						["writeListeners": "React\EventLoop\StreamSelectLoop": private] =>
+						array(0) {}
+						["running": "React\EventLoop\StreamSelectLoop": private] =>
+						NULL
+					}
+					["app"] =>
+					object(MyApp \ Chat) # 3(1) {
+						["clients": protected] =>
+						object(SplObjectStorage) # 2(1) {
+							["storage": "SplObjectStorage": private] =>
+							array(0) {}
+						}
+					}
+					["socket"] =>
+					 * RECURSION *
+				}
+				[1] =>
+				string(13)"handleConnect"
+			}
+		}
+	}
+}
+Total no of Properties: 3
+ **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
+__construct
+factory
+run
+handleConnect
+handleData
+handleEnd
+handleError
+Total no of methods: 7
+
+ ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ==
+React \ Socket \ Server
+
+Total no of Properties: 0
+ **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
+__construct
+getAddress
+pause
+resume
+close
+on
+once
+removeListener
+removeAllListeners
+listeners
+emit
+Total no of methods: 11
+
+ ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ==
+React \ EventLoop \ StreamSelectLoop
+
+Total no of Properties: 0
+ **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
+__construct
+addReadStream
+addWriteStream
+removeReadStream
+removeWriteStream
+removeStream
+addTimer
+addPeriodicTimer
+cancelTimer
+isTimerActive
+nextTick
+futureTick
+tick
+run
+stop
+Total no of methods: 15
+
+ ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ==
+Ratchet \ Http \ HttpServer
+Total no of Properties: 0
+ **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
+__construct
+onOpen
+onMessage
+onClose
+onError
+Total no of methods: 5
+
+ ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ==
+Ratchet \ WebSocket \ WsServer
+Total no of Properties: 0
+ **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
+__construct
+onOpen
+onMessage
+onClose
+onError
+onControlFrame
+setStrictSubProtocolCheck
+enableKeepAlive
+Total no of methods: 8
+
+ ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ==
+MyApp \ Chat
+Total no of Properties: 0
+ **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
+__construct
+onOpen
+onMessage
+onClose
+onError
+Total no of methods: 5
+
+ ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ==
+Ratchet \ Server \ IoConnection
+
+["resourceId"] => int(43)
+["remoteAddress"] => string(9)"127.0.0.1"
+["httpHeadersReceived"] => bool(true)
+
+Total no of Properties: 3
+ **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
+__construct
+send
+close
+Total no of methods: 3
+
+ ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ==
+React \ Socket \ Connection
+["unix"] => bool(false)
+["encryptionEnabled"] => bool(false)
+["stream"] => resource(59)of type(stream)
+
+Total no of Properties: 3
+ **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
+__construct
+isReadable
+isWritable
+pause
+resume
+pipe
+write
+end
+close
+handleClose
+getRemoteAddress
+getLocalAddress
+on
+once
+removeListener
+removeAllListeners
+listeners
+emit
+Total no of methods: 18
+
+ ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ==
+SplObjectStorage
+
+Total no of Properties: 0
+ **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
+attach
+detach
+contains
+addAll
+removeAll
+removeAllExcept
+getInfo
+setInfo
+getHash
+count
+rewind
+valid
+key
+current
+next
+unserialize
+serialize
+offsetExists
+offsetSet
+offsetUnset
+offsetGet
+Total no of methods: 21
+
+ ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  ==
+Symfony \ Component \ HttpFoundation \ Session \ Session
+
+Total no of Properties: 0
+ **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **  **
+__construct
+start
+has
+get
+set
+all
+replace
+remove
+clear
+isStarted
+getIterator
+count // Return no of session data read or write
+getUsageIndex
+isEmpty
+invalidate
+migrate
+save
+getId
+setId
+getName
+setName
+getMetadataBag
+registerBag
+getBag
+getFlashBag
+Total no of methods: 25

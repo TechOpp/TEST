@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- Stop favicon.ico request -->
+  <!--
+<script>
+var conn = new WebSocket('ws://localhost:8080');
+conn.onopen = function(e) {
+    console.log("Connection established!");
+};
+
+conn.onmessage = function(e) {
+    console.log(e.data);
+};
+console.log("Done");
+</script>
+-->
+</head>
+<body>
+<p>Index html</p>
+
+<!--
+<script>AUTOBAHN_DEBUG = true;</script>
+<script src="http://test/OriginalAutobahn/autobahn.js"></script>  
+-->
+<script src="/ab.js"></script>
+<script>
+						WhenOpen = function() {
+									//conn.subscribe('kittensCategory', function(topic, data) {
+									console.log('Autobahn open connection to server: '+ conn._server +' with session ID: ',conn.sessionid() ); //or conn._session_id
+									}
+								
+						WhenClose = function(info) {
+									console.log('WebSocket connection closed: ',info);
+								}
+								
+						 var WAMPconn = new ab.Session('ws://127.0.0.1:8080', WhenOpen	, WhenClose, {'skipSubprotocolCheck': true}	);		
+						
+	
+	function loadDoc() {
+		var xhttp = new XMLHttpRequest();
+		  
+		 xhttp.onreadystatechange = function() {				console.log('xhttp ready state change',this.readyState, this.status);
+			if (this.readyState == 4 && this.status == 200) { 	
+				console.log("Result: ",JSON.stringify(this.responseText));
+			//document.getElementById("demo").innerHTML = this.responseText;
+			}
+		}
+		  
+		  
+		/*
+		//POST request with JSON as a raw data
+		  var data = {category:"kittensCategory",title:"post",article:"first Post"};	
+		  //  console.log("sending data: ",JSON.stringify(data));
+		  xhttp.open("POST", "post-server.php", true);
+		  xhttp.setRequestHeader("Content-Type", "application/json"); 
+		  xhttp.send(JSON.stringify(data));
+		*/
+		
+		// POST request with direct data 
+		xhttp.open("POST", "post-server.php", true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send("category=kittensCategory&title=post&article=first Post"); 	 
+			 
+		// GET request with query data	
+		//  var params = "category=kittensCategory" + "&title=post" + "&article=first Post";
+		//  xhttp.open("GET", "post-server.php?"+params, true);
+		//  xhttp.send();
+
+	}
+</script>
+
+<script>
+	var WSconn = new WebSocket('ws://localhost:8080');
+	WSconn.onopen = function(e) {
+		console.log("Connection established!");
+	};
+
+	WSconn.onmessage = function(e) {
+		console.log(e.data);
+	};
+
+//3. Now send message to other connected client as
+ //conn.send('Hello World!');
+
+</script>
+
+<div id="demo">
+  <h2>Let AJAX change this text</h2>
+  <button type="button" onclick="loadDoc()">Change Content</button><br><br>
+</div>
+
+<form action="/post-server.php" method="post">
+  <label for="fname">Title:</label>
+	<input type="text" id="fname" name="title"><br><br>
+  <label for="lname">category:</label>
+	<input type="text" id="lname" name="category"><br><br>
+  <label for="lname">Article:</label>
+	<input type="text" id="lname" name="article"><br><br>
+  <input type="submit" value="Submit">
+  
+</form>
+</body>
+</html>
